@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
 
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const lato = Montserrat({
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   authors: [{ name: 'Otávio Melo' }],
-  description: 'Criado por Lumous',
+  description:
+    'Empresa de automação residencial em Minas Gerais. Transforme sua casa em um lar mágico com a Lumous.',
   title: 'Lumous | Automação Residencial',
 };
 
@@ -17,7 +20,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-Br">
-      <body className={inter.className}>{children}</body>
+      <body className={lato.className}>{children}</body>
     </html>
   );
 }
