@@ -2,9 +2,14 @@ import type { Metadata } from 'next';
 
 import { Montserrat } from 'next/font/google';
 
+import { Navbar } from '@/components/Navbar';
+import { cn } from '@/lib/utils';
+
 import './globals.css';
 
-const lato = Montserrat({
+const montserrat = Montserrat({
+  fallback: ['font-sans', 'sans-serif', 'system-ui', 'ui-sans-serif', 'arial'],
+  preload: true,
   subsets: ['latin'],
 });
 
@@ -20,7 +25,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-Br">
-      <body className={lato.className}>{children}</body>
+      <body
+        className={cn(
+          'min-h-screen bg-background antialiased',
+          montserrat.className,
+        )}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
