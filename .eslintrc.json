@@ -1,3 +1,127 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:import/react",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier",
+    "plugin:perfectionist/recommended-natural",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-refresh",
+    "react-hooks",
+    "import",
+    "jsx-a11y",
+    "perfectionist"
+  ],
+  "rules": {
+    "semi": [2, "always"],
+    "no-async-promise-executor": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/prop-types": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-refresh/only-export-components": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "no-empty-pattern": "off",
+    "perfectionist/sort-objects": "warn",
+    "perfectionist/sort-jsx-props": "warn",
+    "perfectionist/sort-object-types": "warn",
+    "react/no-unescaped-entities": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/*/*/*"]
+      }
+    ],
+    "perfectionist/sort-imports": [
+      "warn",
+      {
+        "type": "natural",
+        "order": "asc",
+        "groups": [
+          "type",
+          "react",
+          "nanostores",
+          ["builtin", "external"],
+          "internal-type",
+          "internal",
+          "parent-type",
+          ["parent-type", "sibling-type", "index-type"],
+          ["parent", "sibling", "index"],
+          "side-effect",
+          "style",
+          "object",
+          "unknown"
+        ],
+        "custom-groups": {
+          "value": {
+            "react": ["react", "react-*"],
+            "nanostores": "@nanostores/**"
+          },
+          "type": {
+            "react": "react"
+          }
+        },
+        "newlines-between": "always",
+        "internal-pattern": [
+          "@/app/**",
+          "@/shared/**",
+          "@/components/**",
+          "@/stores/**",
+          "@/pages/**",
+          "@/lib/**"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "globals": {
+    "Util": true,
+    "connection": true,
+    "RequestResult": true,
+    "FormatSQLRes": true,
+    "Constantes": true,
+    "sumArray": true,
+    "async": true,
+    "horarioBrasilia": true,
+    "session": true,
+    "React": true,
+    "NodeJS": true
+  }
 }
