@@ -25,6 +25,10 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
+    href: '/',
+    label: 'Home',
+  },
+  {
     href: '#sobre',
     label: 'Sobre',
   },
@@ -36,15 +40,11 @@ const routeList: RouteProps[] = [
     href: '#contato',
     label: 'Contato',
   },
-  // {
-  //   href: '#faq',
-  //   label: 'FAQ',
-  // },
 ];
 
 export const Navbar = () => {
   return (
-    <nav className="sticky border-b-[1px] top-0 z-40 w-full bg-white ">
+    <nav className="sticky border-b-[1px] top-0 z-40 w-full bg-background ">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
