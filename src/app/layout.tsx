@@ -1,16 +1,20 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
 
-const inter = Inter({ subsets: ["latin"] })
+import { Inter } from 'next/font/google';
+
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Lumous | Automação Residencial",
-  description: "Criado por Lumous",
-  authors: [{name: 'Otávio Melo' }],
+  authors: [{ name: 'Otávio Melo' }],
+  description: 'Criado por Lumous',
+  title: 'Lumous | Automação Residencial',
 };
 
-export default function RootLayout({children}: Readonly<{children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-Br">
       <body className={inter.className}>{children}</body>
