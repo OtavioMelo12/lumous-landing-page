@@ -44,9 +44,9 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   return (
-    <nav className="sticky border-b-[1px] top-0 z-40 w-full bg-background ">
+    <nav className="sticky top-0 z-40 w-full bg-orange-500 text-white ">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
+        <NavigationMenuList className="container px-4 py-2 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <Link
               className="ml-2 font-bold text-xl flex items-center gap-1"
@@ -75,17 +75,6 @@ export const Navbar = () => {
               </Link>
             ))}
           </header>
-
-          <div className="hidden md:flex gap-2">
-            <Link
-              className={`border ${buttonVariants({ variant: 'secondary' })}`}
-              href="https://www.instagram.com/lumousautomacao/"
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              Instagram
-            </Link>
-          </div>
         </NavigationMenuList>
       </NavigationMenu>
     </nav>

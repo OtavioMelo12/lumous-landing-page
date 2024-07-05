@@ -12,8 +12,20 @@ export const LogoIcon = ({ className }: LogoIconProps) => {
       alt="Logo Lumous Preta"
       className={cn(className)}
       height={50}
-      src={'/images/icons/LUMOUS-LOGO_P.svg'}
+      src={'/images/icons/LUMOUS-LOGO_B.svg'}
       width={50}
+    />
+  );
+};
+
+export const WhatsIcon = ({ className }: LogoIconProps) => {
+  return (
+    <Image
+      alt="Logo WhatsApp"
+      className={cn(className)}
+      height={15}
+      src={'/images/icons/whats.svg'}
+      width={15}
     />
   );
 };

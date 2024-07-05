@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 
+import { InstagramIcon } from 'lucide-react';
 import { Montserrat } from 'next/font/google';
+import Link from 'next/link';
 
+import { WhatsIcon } from '@/components/Icons';
 import { Navbar } from '@/components/Navbar';
 import { cn } from '@/lib/utils';
 
@@ -27,10 +30,36 @@ export default function RootLayout({
     <html lang="pt-Br">
       <body
         className={cn(
-          'min-h-screen bg-background antialiased',
+          'min-h-screen bg-gradient-to-r from-slate-900 to-slate-700 antialiased',
           montserrat.className,
         )}
       >
+        <div className="bg-teal-500 text-white  p-1">
+          <div className="container flex items-center justify-between">
+            <div className="flex gap-1 items-center">
+              <WhatsIcon className="inline" />
+
+              <Link
+                className="text-sm"
+                href="https://wa.me/message/BQEMI636X4STE1"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                (35) 9 8466-3756
+              </Link>
+            </div>
+
+            <div>
+              <Link
+                href="https://www.instagram.com/lumousautomacao/"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <InstagramIcon className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
         <Navbar />
         {children}
       </body>
