@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="pt-Br">
       <body
         className={cn(
-          'min-h-screen bg-gradient-to-r from-slate-900 to-slate-700 antialiased',
+          'min-h-screen bg-background antialiased',
           montserrat.className,
         )}
       >
