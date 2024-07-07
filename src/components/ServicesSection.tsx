@@ -1,7 +1,13 @@
 'use client';
 
 import Autoplay from 'embla-carousel-autoplay';
-import { AudioLinesIcon, LampDeskIcon, LockIcon, WifiIcon } from 'lucide-react';
+import {
+  AudioLinesIcon,
+  LampDeskIcon,
+  LockIcon,
+  PopcornIcon,
+  WifiIcon,
+} from 'lucide-react';
 import Image from 'next/image';
 
 import {
@@ -54,7 +60,7 @@ const services = [
     description: `Crie uma verdadeira experiência cinematográfica no conforto da sua casa. 
     Projetos de home cinema proporcionam uma qualidade de som e imagem incomparáveis, 
     fazendo com que você se sinta dentro dos filmes e séries favoritos.`,
-    icon: AudioLinesIcon,
+    icon: PopcornIcon,
     image: '/images/home/cinema.jpg',
     title: 'Home Cinema',
   },

@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button';
 export const HeroSection = () => {
   return (
     <section className="bg-gradient-to-r from-slate-900 to-slate-700 text-white">
-      <div className="container grid lg:grid-cols-2 place-items-center py-8 gap-10 ">
-        <div className="text-center lg:text-start space-y-6">
-          <h1 className="inline text-5xl md:text-5xl font-bold">
+      <div className="container flex py-8 md:py-14 gap-10 justify-around items-center flex-wrap">
+        <div className="flex-1 text-center lg:text-start flex flex-col gap-6 max-w-[500px]">
+          <h1 className="inline text-4xl md:text-5xl font-bold">
             Transforme sua casa em um{' '}
             <span className="whitespace-nowrap inline bg-gradient-to-r from-[#5EEAD4] via-[#2DD4BF] to-[#0D9488] text-transparent bg-clip-text">
               lar mágico
@@ -18,7 +18,7 @@ export const HeroSection = () => {
               Lumous
             </span>{' '}
           </h1>{' '}
-          <p className="text-xl text-white md:w-10/12 mx-auto lg:mx-0">
+          <p className="text-lg md:text-xl text-white md:w-10/12 mx-auto lg:mx-0">
             Automação residencial trazendo conforto e segurança para o seu lar
           </p>
           <div className="space-y-4 md:space-y-0 md:space-x-4">
@@ -34,12 +34,12 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="max-w-[500px]">
+        <div className="max-w-[300px] md:max-w-[500px] p-4">
           <Image
             alt="Hero"
-            height={500}
-            src={'/images/home/hero.png'}
-            width={500}
+            height={1080}
+            src={'/images/home/hero3.png'}
+            width={1131}
           />
         </div>
       </div>
