@@ -37,9 +37,9 @@ export const HeroSection = () => {
         <div className="max-w-[300px] md:max-w-[500px]">
           <Image
             alt="Hero"
-            height={1000}
+            height={500}
             src={'/images/home/hero-bg.png'}
-            width={1000}
+            width={500}
           />
         </div>
       </div>

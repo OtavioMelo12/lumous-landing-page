@@ -36,7 +36,7 @@ const services = [
     title: 'Automações',
   },
   {
-    description: `Automatize a iluminação da susa casa. <b>Controle a intensidade</b> e atmosfera de
+    description: `Automatize a iluminação da sua casa. <b>Controle a intensidade</b> e atmosfera de
       cada ambiente com um simples toque ou comando de voz. <b>Economize energia</b> com 
       desligamentos automáticos e personalize sua experiência luminosa para cada momento do seu dia.`,
     icon: LampDeskIcon,
@@ -103,6 +103,7 @@ export const ServicesSection = () => {
               delay: 4000,
               playOnInit: true,
               stopOnFocusIn: false,
+              stopOnInteraction: false,
             }),
           ]}
         >
@@ -116,9 +117,9 @@ export const ServicesSection = () => {
                   <Image
                     alt={service.title}
                     className="rounded-xl w-full h-48 object-cover p-1"
-                    height={750}
+                    height={550}
                     src={service.image}
-                    width={750}
+                    width={550}
                   />
 
                   <CardHeader>
