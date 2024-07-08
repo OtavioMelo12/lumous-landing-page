@@ -30,14 +30,14 @@ const services = [
     description:
       'Automatize a iluminação da susa casa. Controle a intensidade e atmosfera de cada ambiente com um simples toque ou comando de voz. Economize energia com desligamentos automáticos e personalize sua experiência luminosa para cada momento do seu dia.',
     icon: LampDeskIcon,
-    image: '/images/home/iluminacao.jpg',
+    image: '/images/home/iluminacao.webp',
     title: 'Iluminação',
   },
   {
     description:
       'Garanta a segurança da sua família com soluções de segurança eletrônica de última geração. Monitore sua casa em tempo real, receba alertas instantâneos e tenha controle total sobre a proteção do seu lar, onde quer que você esteja.',
     icon: LockIcon,
-    image: '/images/home/seguranca.jpg',
+    image: '/images/home/seguranca.webp',
     title: 'Segurança Eletrônica',
   },
   {
@@ -45,7 +45,7 @@ const services = [
     com um projeto de redes de alta performance. Projetamos e implementamos infraestruturas
     personalizadas que suportam todas as suas necessidades do ambiente.`,
     icon: WifiIcon,
-    image: '/images/home/rede.avif',
+    image: '/images/home/rede.webp',
     title: 'Redes Wi-fi Premium ',
   },
   {
@@ -53,7 +53,7 @@ const services = [
     Projetos de sonorização ambiente personalizados, você pode criar atmosferas sonoras 
     perfeitas para cada ocasião, controlando tudo de maneira fácil e intuitiva.`,
     icon: AudioLinesIcon,
-    image: '/images/home/som.jpg',
+    image: '/images/home/som.webp',
     title: 'Sonorização Ambiente',
   },
   {
@@ -61,7 +61,7 @@ const services = [
     Projetos de home cinema proporcionam uma qualidade de som e imagem incomparáveis, 
     fazendo com que você se sinta dentro dos filmes e séries favoritos.`,
     icon: PopcornIcon,
-    image: '/images/home/cinema.jpg',
+    image: '/images/home/cinema.webp',
     title: 'Home Cinema',
   },
 ];
