@@ -1,4 +1,4 @@
-import { Menu } from 'lucide-react';
+import { InstagramIcon, Menu } from 'lucide-react';
 import Link from 'next/link';
 
 import {
@@ -14,6 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { Environment } from '@/lib/environment';
 
 import { LogoIcon } from './Icons';
 import { buttonVariants } from './ui/button';
@@ -64,9 +65,11 @@ export const Navbar = () => {
           <header className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
               <Link
-                className={`text-[17px] ${buttonVariants({
-                  variant: 'ghost',
-                })}`}
+                className={`text-[17px] bg-transparent border-white hover:bg-orange-600 ${buttonVariants(
+                  {
+                    variant: 'outline',
+                  },
+                )}`}
                 href={route.href}
                 key={i}
                 rel="noreferrer noopener"
@@ -107,11 +110,12 @@ const MobileSheet = () => {
             ))}
 
             <Link
-              className={`border ${buttonVariants({ variant: 'secondary' })}`}
-              href="https://www.instagram.com/lumousautomacao/"
+              className={`border flex items-center gap-2 ${buttonVariants({ variant: 'secondary' })}`}
+              href={Environment.INSTAGRAM_URL}
               rel="noreferrer noopener"
               target="_blank"
             >
+              <InstagramIcon size={20} />
               Instagram
             </Link>
           </nav>

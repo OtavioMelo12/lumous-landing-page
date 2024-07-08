@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-b md:bg-gradient-to-r from-[#0D0D0D] to-[#4F5559] text-white">
+    <section className="">
       <div className="container flex py-8 md:py-14 gap-10 justify-around items-center flex-wrap">
         <div className="flex-1 text-center lg:text-start flex flex-col gap-6 max-w-[500px]">
           <h1 className="inline text-4xl md:text-5xl font-bold">
@@ -34,7 +34,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="max-w-[300px] md:max-w-[500px] p-4">
+        <div className="max-w-[300px] md:max-w-[500px]">
           <Image
             alt="Hero"
             height={1000}

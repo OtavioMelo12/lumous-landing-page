@@ -3,6 +3,7 @@
 import Autoplay from 'embla-carousel-autoplay';
 import {
   AudioLinesIcon,
+  HousePlugIcon,
   LampDeskIcon,
   LockIcon,
   PopcornIcon,
@@ -27,38 +28,48 @@ import {
 
 const services = [
   {
-    description:
-      'Automatize a iluminação da susa casa. Controle a intensidade e atmosfera de cada ambiente com um simples toque ou comando de voz. Economize energia com desligamentos automáticos e personalize sua experiência luminosa para cada momento do seu dia.',
+    description: `Projetos de automação personalizados permitindo o controle de diversos dispositivos, 
+      como <b>cortinas/persianas</b>, <b>ar condicionado</b>, irrigação de <b>jardins</b>, <b>piscinas</b>, 
+      <b>TVs</b>, entre outros. Tudo isso de forma integrada e intuitiva.`,
+    icon: HousePlugIcon,
+    image: '/images/home/automacao.webp',
+    title: 'Automações',
+  },
+  {
+    description: `Automatize a iluminação da susa casa. <b>Controle a intensidade</b> e atmosfera de
+      cada ambiente com um simples toque ou comando de voz. <b>Economize energia</b> com 
+      desligamentos automáticos e personalize sua experiência luminosa para cada momento do seu dia.`,
     icon: LampDeskIcon,
     image: '/images/home/iluminacao.webp',
     title: 'Iluminação',
   },
   {
-    description:
-      'Garanta a segurança da sua família com soluções de segurança eletrônica de última geração. Monitore sua casa em tempo real, receba alertas instantâneos e tenha controle total sobre a proteção do seu lar, onde quer que você esteja.',
+    description: `Garanta a segurança da sua família com sistema de monitoramento e <b>fechaduras inteligentes</b>.
+      Monitore sua casa em tempo real, <b>receba alertas instantâneos</b> e tenha controle 
+      total sobre a proteção do seu lar, <b>onde quer que você esteja</b>.`,
     icon: LockIcon,
     image: '/images/home/seguranca.webp',
     title: 'Segurança Eletrônica',
   },
   {
-    description: `Garanta conexões rápidas, estáveis e seguras em toda a sua casa 
-    com um projeto de redes de alta performance. Projetamos e implementamos infraestruturas
+    description: `Garanta conexões <b>rápidas</b>, <b>estáveis</b> e <b>seguras</b> em toda a sua casa 
+    com um projeto de redes de <b>alta performance</b>. Projetamos e implementamos infraestruturas
     personalizadas que suportam todas as suas necessidades do ambiente.`,
     icon: WifiIcon,
     image: '/images/home/rede.webp',
     title: 'Redes Wi-fi Premium ',
   },
   {
-    description: `Leve música e qualidade de som para todos os locais da sua casa/comércio.
-    Projetos de sonorização ambiente personalizados, você pode criar atmosferas sonoras 
+    description: `Leve música e som de qualidade para <b>todos os locais</b> da sua casa/comércio.
+    Projetos de sonorização ambiente personalizados, você pode criar <b>atmosferas sonoras</b> 
     perfeitas para cada ocasião, controlando tudo de maneira fácil e intuitiva.`,
     icon: AudioLinesIcon,
     image: '/images/home/som.webp',
     title: 'Sonorização Ambiente',
   },
   {
-    description: `Crie uma verdadeira experiência cinematográfica no conforto da sua casa. 
-    Projetos de home cinema proporcionam uma qualidade de som e imagem incomparáveis, 
+    description: `Crie uma verdadeira <b>experiência cinematográfica</b> no conforto da sua casa. 
+    Projetos de home cinema <b>(Home Theater, Projetores, Flap TV)</b> proporcionam uma qualidade de <b>som e imagem</b> incomparáveis, 
     fazendo com que você se sinta dentro dos filmes e séries favoritos.`,
     icon: PopcornIcon,
     image: '/images/home/cinema.webp',
@@ -68,10 +79,13 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section className="p-8 flex flex-col gap-2 items-center" id="servicos">
+    <section
+      className="p-8 flex flex-col gap-2 items-center bg-background"
+      id="servicos"
+    >
       <h1 className="text-4xl font-bold text-center">Nossos Serviços</h1>
 
-      <h2 className="text-sm text-center max-w-[700px]">
+      <h2 className="text-sm md:text-base text-center max-w-[700px]">
         Soluções completas para proporcionar mais conforto, segurança e
         praticidade ao seu dia a dia. Nossos serviços podem tornar sua
         casa/comércio mais inteligente e eficiente.
@@ -86,10 +100,9 @@ export const ServicesSection = () => {
           }}
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 4000,
               playOnInit: true,
               stopOnFocusIn: false,
-              stopOnInteraction: false,
             }),
           ]}
         >
@@ -99,10 +112,10 @@ export const ServicesSection = () => {
                 className="pl-2 md:basis-1/2 lg:basis-1/3 md:pl-4"
                 key={service.title}
               >
-                <Card className="h-full">
+                <Card className="h-full rounded-xl bg-white text-black">
                   <Image
                     alt={service.title}
-                    className="rounded-lg w-full h-48 object-cover"
+                    className="rounded-xl w-full h-48 object-cover p-1"
                     height={750}
                     src={service.image}
                     width={750}
@@ -115,14 +128,19 @@ export const ServicesSection = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>{service.description}</CardDescription>
+                    <CardDescription
+                      className="text-black/90 font-normal"
+                      dangerouslySetInnerHTML={{
+                        __html: service.description,
+                      }}
+                    />
                   </CardContent>
                 </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="border-white/20" />
+          <CarouselNext className="border-white/20" />
         </Carousel>
       </div>
     </section>
