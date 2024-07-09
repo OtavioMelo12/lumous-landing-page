@@ -62,6 +62,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-Br">
+      <head>
+        <meta
+          content="F4DUd3kmkIwd-MCuSPKfPpDebCrPG2f84Fx8ADuLwZ4"
+          name="google-site-verification"
+        />
+      </head>
       <body
         className={cn(
           'min-h-screen bg-background antialiased',
