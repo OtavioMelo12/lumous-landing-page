@@ -1,5 +1,6 @@
-import { InstagramIcon, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import Link from 'next/link';
+import { FaInstagram } from 'react-icons/fa6';
 
 import {
   NavigationMenu,
@@ -16,8 +17,8 @@ import {
 } from '@/components/ui/sheet';
 import { Environment } from '@/lib/environment';
 
-import { LogoIcon } from './Icons';
-import { buttonVariants } from './ui/button';
+import { LogoIconBlack } from './Icons';
+import { Button, buttonVariants } from './ui/button';
 
 interface RouteProps {
   href: string;
@@ -28,10 +29,6 @@ const routeList: RouteProps[] = [
   {
     href: '/',
     label: 'Home',
-  },
-  {
-    href: '#sobre',
-    label: 'Sobre',
   },
   {
     href: '#servicos',
@@ -45,7 +42,7 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-40 w-full bg-orange-500 text-white ">
+    <nav className="sticky top-0 z-40 w-full bg-background shadow-lg">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container px-4 py-2 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
@@ -54,7 +51,7 @@ export const Navbar = () => {
               href="/"
               rel="noreferrer noopener"
             >
-              <LogoIcon />
+              <LogoIconBlack />
               Lumous
             </Link>
           </NavigationMenuItem>
@@ -63,19 +60,12 @@ export const Navbar = () => {
 
           {/* desktop */}
           <header className="hidden md:flex gap-2">
-            {routeList.map((route: RouteProps, i) => (
-              <Link
-                className={`text-[17px] bg-transparent border-white hover:bg-orange-600 ${buttonVariants(
-                  {
-                    variant: 'outline',
-                  },
-                )}`}
-                href={route.href}
-                key={i}
-                rel="noreferrer noopener"
-              >
-                {route.label}
-              </Link>
+            {routeList.map((route: RouteProps) => (
+              <Button asChild key={route.href} variant="outline">
+                <Link href={route.href} rel="noreferrer noopener">
+                  {route.label}
+                </Link>
+              </Button>
             ))}
           </header>
         </NavigationMenuList>
@@ -115,7 +105,7 @@ const MobileSheet = () => {
               rel="noreferrer noopener"
               target="_blank"
             >
-              <InstagramIcon size={20} />
+              <FaInstagram size={20} />
               Instagram
             </Link>
           </nav>

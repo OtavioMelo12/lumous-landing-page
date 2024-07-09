@@ -1,29 +1,25 @@
-import {
-  FacebookIcon,
-  InstagramIcon,
-  MailIcon,
-  MapPinnedIcon,
-} from 'lucide-react';
+import { MailIcon, MapPinnedIcon } from 'lucide-react';
 import Link from 'next/link';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa6';
 
-import { LogoIcon, WhatsIcon } from '@/components/Icons';
+import { LogoIconOrange } from '@/components/Icons';
 import { Separator } from '@/components/ui/separator';
 import { Environment } from '@/lib/environment';
 
 export const Footer = () => {
   return (
-    <footer className="" id="footer">
-      <Separator className="w-11/12 mx-auto bg-white" />
+    <footer className="" id="contato">
+      <Separator className="w-11/12 mx-auto mt-8" />
 
-      <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
+      <section className="container py-20 pt-12 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
           <Link
             className="font-bold text-xl flex items-center gap-1"
             href="/"
             rel="noreferrer noopener"
           >
-            <LogoIcon />
-            Lumous
+            <LogoIconOrange />
+            Lumous | Automação Residencial
           </Link>
         </div>
 
@@ -36,7 +32,7 @@ export const Footer = () => {
               rel="noreferrer noopener"
               target="_blank"
             >
-              <WhatsIcon />
+              <FaWhatsapp className="size-4" />
               {Environment.WHATSAPP_NUMBER}
             </Link>
           </div>
@@ -73,8 +69,8 @@ export const Footer = () => {
               rel="noreferrer noopener"
               target="_blank"
             >
-              <InstagramIcon className="min-h-4 min-w-4 size-4" />
-              @lumousautomacao
+              <FaInstagram className="min-h-4 min-w-4 size-4" />
+              lumousautomacao
             </Link>
           </div>
           <div>
@@ -84,7 +80,7 @@ export const Footer = () => {
               rel="noreferrer noopener"
               target="_blank"
             >
-              <FacebookIcon className="min-h-4 size-4 min-w-4" />
+              <FaFacebook className="min-h-4 size-4 min-w-4" />
               Página - Lumous
             </Link>
           </div>
@@ -95,7 +91,7 @@ export const Footer = () => {
         <h3>
           &copy; 2024 Landing page criada por{' '}
           <a
-            className="text-primary transition-all border-primary hover:border-b-2"
+            className="text-primary transition-all border-primary hover:border-b-2 font-medium"
             href="https://www.instagram.com/_otavio_melo/"
             rel="noreferrer noopener"
             target="_blank"

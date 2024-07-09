@@ -80,12 +80,14 @@ const services = [
 export const ServicesSection = () => {
   return (
     <section
-      className="p-8 flex flex-col gap-2 items-center bg-background"
+      className="p-8 pt-0 flex flex-col gap-2 items-center bg-orange-500"
       id="servicos"
     >
-      <h1 className="text-4xl font-bold text-center">Nossos Serviços</h1>
+      <h1 className="text-4xl font-bold text-center text-white">
+        Nossos Serviços
+      </h1>
 
-      <h2 className="text-sm md:text-base text-center max-w-[700px]">
+      <h2 className="text-sm md:text-base text-center max-w-[700px] text-white/90">
         Soluções completas para proporcionar mais conforto, segurança e
         praticidade ao seu dia a dia. Nossos serviços podem tornar sua
         casa/comércio mais inteligente e eficiente.
@@ -113,10 +115,10 @@ export const ServicesSection = () => {
                 className="pl-2 md:basis-1/2 lg:basis-1/3 md:pl-4"
                 key={service.title}
               >
-                <Card className="h-full rounded-xl bg-white text-black">
+                <Card className="h-full rounded-2xl">
                   <Image
                     alt={service.title}
-                    className="rounded-xl w-full h-48 object-cover p-1"
+                    className="rounded-2xl w-full h-48 object-cover p-1"
                     height={550}
                     src={service.image}
                     width={550}

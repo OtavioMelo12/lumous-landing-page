@@ -6,10 +6,10 @@ interface LogoIconProps {
   className?: string;
 }
 
-export const LogoIcon = ({ className }: LogoIconProps) => {
+export const LogoIconWhite = ({ className }: LogoIconProps) => {
   return (
     <Image
-      alt="Logo Lumous Preta"
+      alt="Logo Lumous Branca"
       className={cn(className)}
       height={50}
       src={'/images/icons/LUMOUS-LOGO_B.svg'}
@@ -18,14 +18,26 @@ export const LogoIcon = ({ className }: LogoIconProps) => {
   );
 };
 
-export const WhatsIcon = ({ className }: LogoIconProps) => {
+export const LogoIconBlack = ({ className }: LogoIconProps) => {
   return (
     <Image
-      alt="Logo WhatsApp"
+      alt="Logo Lumous Preta"
       className={cn(className)}
-      height={15}
-      src={'/images/icons/whats.svg'}
-      width={15}
+      height={50}
+      src={'/images/icons/LUMOUS-LOGO_P.svg'}
+      width={50}
+    />
+  );
+};
+
+export const LogoIconOrange = ({ className }: LogoIconProps) => {
+  return (
+    <Image
+      alt="Logo Lumous Laranja"
+      className={cn(className)}
+      height={50}
+      src={'/images/icons/LUMOUS_LOGO_L.svg'}
+      width={50}
     />
   );
 };

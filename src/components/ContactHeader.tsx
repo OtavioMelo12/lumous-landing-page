@@ -1,7 +1,6 @@
-import { InstagramIcon } from 'lucide-react';
 import Link from 'next/link';
-
-import { WhatsIcon } from './Icons';
+import { FaInstagram } from 'react-icons/fa6';
+import { IoLogoWhatsapp } from 'react-icons/io5';
 
 export const ContactHeader = () => {
   return (
@@ -13,7 +12,7 @@ export const ContactHeader = () => {
           rel="noreferrer noopener"
           target="_blank"
         >
-          <WhatsIcon className="inline" />
+          <IoLogoWhatsapp className="h-4 w-4" />
           (35) 9 8466-3756
         </Link>
         <Link
@@ -22,8 +21,8 @@ export const ContactHeader = () => {
           rel="noreferrer noopener"
           target="_blank"
         >
-          <InstagramIcon className="h-4 w-4" />
-          @lumousautomacao
+          <FaInstagram className="h-4 w-4" />
+          lumousautomacao
         </Link>
       </div>
     </div>
