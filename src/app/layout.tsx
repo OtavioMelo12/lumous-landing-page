@@ -17,9 +17,43 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  authors: [{ name: 'Otávio Melo' }],
+  authors: [
+    {
+      name: 'Otávio Melo',
+      url: 'https://www.linkedin.com/in/otaviomelo12/',
+    },
+  ],
+  creator: 'Otávio Melo, Lumous',
   description:
     'Empresa de automação residencial em Minas Gerais. Transforme sua casa em um lar mágico com a Lumous.',
+  keywords: [
+    'automação residencial',
+    'casa inteligente',
+    'smart home',
+    'home automation',
+    'serviços de automação',
+    'lumous automação',
+    'lumous',
+    'minas gerais',
+    'lavras',
+  ],
+  openGraph: {
+    description:
+      'Empresa de automação residencial em Minas Gerais. Transforme sua casa em um lar mágico com a Lumous.',
+    images: [
+      {
+        alt: 'Lumous OG Image',
+        height: 672,
+        url: 'https://lumous.com.br/images/og.png',
+        width: 1280,
+      },
+    ],
+    locale: 'pt_BR',
+    title: 'Lumous | Automação Residencial',
+    type: 'website',
+  },
+  publisher: 'Lumous / Otávio Melo',
+  robots: 'index, follow',
   title: 'Lumous | Automação Residencial',
 };
 
