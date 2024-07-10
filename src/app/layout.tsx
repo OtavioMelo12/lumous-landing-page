@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
@@ -7,6 +8,7 @@ import { ContactHeader } from '@/components/ContactHeader';
 import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Environment } from '@/lib/environment';
 import { cn } from '@/lib/utils';
 
 import './globals.css';
@@ -109,6 +111,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
+      <GoogleTagManager gtmId={Environment.GOOGLE_TAG_MANAGER_ID} />
     </html>
   );
 }
