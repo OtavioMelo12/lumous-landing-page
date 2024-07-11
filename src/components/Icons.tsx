@@ -59,9 +59,9 @@ export const LogotipoVertIconOrange = ({ className }: LogoIconProps) => {
     <Image
       alt="Logo Lumous Laranja"
       className={cn(className, '')}
-      height={200}
+      height={150}
       src={'/images/icons/LOGOTIPO-VERT-L.svg'}
-      width={200}
+      width={150}
     />
   );
 };

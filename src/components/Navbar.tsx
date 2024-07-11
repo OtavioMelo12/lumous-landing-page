@@ -77,9 +77,11 @@ const MobileSheet = () => {
           <Menu className="flex md:hidden h-5 w-5" />
         </SheetTrigger>
 
-        <SheetContent side={'right'}>
+        <SheetContent className="items-center flex flex-col" side={'right'}>
           <SheetHeader>
-            <SheetTitle className="font-bold text-xl">Lumous</SheetTitle>
+            <SheetTitle>
+              <LogotipoIconBlack />
+            </SheetTitle>
           </SheetHeader>
           <nav className="flex flex-col justify-center items-center gap-2 mt-4">
             {routeList.map(({ href, label }: RouteProps) => (

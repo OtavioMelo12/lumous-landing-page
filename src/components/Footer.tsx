@@ -90,7 +90,7 @@ export const Footer = () => {
         <h3>
           &copy; 2024 Landing page criada por{' '}
           <a
-            className="text-primary transition-all border-primary hover:border-b-2 font-medium"
+            className="text-primary transition-all border-primary hover:border-b-2 font-medium whitespace-nowrap"
             href="https://www.instagram.com/_otavio_melo/"
             rel="noreferrer noopener"
             target="_blank"
