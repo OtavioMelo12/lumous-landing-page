@@ -41,3 +41,27 @@ export const LogoIconOrange = ({ className }: LogoIconProps) => {
     />
   );
 };
+
+export const LogotipoIconBlack = ({ className }: LogoIconProps) => {
+  return (
+    <Image
+      alt="Logo Lumous Laranja"
+      className={cn(className, '')}
+      height={100}
+      src={'/images/icons/LOGOTIPO-HORI-P.svg'}
+      width={200}
+    />
+  );
+};
+
+export const LogotipoVertIconOrange = ({ className }: LogoIconProps) => {
+  return (
+    <Image
+      alt="Logo Lumous Laranja"
+      className={cn(className, '')}
+      height={200}
+      src={'/images/icons/LOGOTIPO-VERT-L.svg'}
+      width={200}
+    />
+  );
+};

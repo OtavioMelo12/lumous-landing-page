@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
 

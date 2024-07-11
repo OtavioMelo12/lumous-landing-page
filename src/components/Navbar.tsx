@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/sheet';
 import { Environment } from '@/lib/environment';
 
-import { LogoIconBlack } from './Icons';
+import { LogotipoIconBlack } from './Icons';
 import { Button, buttonVariants } from './ui/button';
 
 interface RouteProps {
@@ -46,13 +46,8 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container px-4 py-2 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <Link
-              className="ml-2 font-bold text-xl flex items-center gap-1"
-              href="/"
-              rel="noreferrer noopener"
-            >
-              <LogoIconBlack />
-              Lumous
+            <Link className="" href="/" rel="noreferrer noopener">
+              <LogotipoIconBlack />
             </Link>
           </NavigationMenuItem>
 

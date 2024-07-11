@@ -2,7 +2,7 @@ import { MailIcon, MapPinnedIcon } from 'lucide-react';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa6';
 
-import { LogoIconOrange } from '@/components/Icons';
+import { LogotipoVertIconOrange } from '@/components/Icons';
 import { Separator } from '@/components/ui/separator';
 import { Environment } from '@/lib/environment';
 
@@ -14,12 +14,11 @@ export const Footer = () => {
       <section className="container py-20 pt-12 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
           <Link
-            className="font-bold text-xl flex items-center gap-1"
+            className="font-bold text-xl flex items-center gap-1 justify-center"
             href="/"
             rel="noreferrer noopener"
           >
-            <LogoIconOrange />
-            Lumous | Automação Residencial
+            <LogotipoVertIconOrange />
           </Link>
         </div>
 
