@@ -17,13 +17,10 @@ export const HeroSection = () => {
         <div className="flex-1 text-center lg:text-start flex flex-col gap-6 max-w-[500px]">
           <h1 className="inline text-4xl md:text-5xl font-bold text-white">
             Transforme sua casa em um{' '}
-            <span className="whitespace-nowrap inline bg-gradient-to-r from-[#5EEAD4] via-[#2DD4BF] to-[#0D9488] text-transparent bg-clip-text">
+            <span className="whitespace-nowrap inline text-teal-400">
               lar mágico
             </span>{' '}
-            com a{' '}
-            <span className="inline bg-gradient-to-r from-[#fdba74]  to-[#f97316] text-transparent bg-clip-text">
-              Lumous
-            </span>{' '}
+            com a <span className="inline text-orange-400">Lumous</span>{' '}
           </h1>{' '}
           <p className="text-lg md:text-xl text-white md:w-10/12 mx-auto lg:mx-0">
             Automação residencial trazendo conforto e segurança para o seu lar
