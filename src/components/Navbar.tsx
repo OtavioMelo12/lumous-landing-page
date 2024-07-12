@@ -38,6 +38,10 @@ const routeList: RouteProps[] = [
     href: '#contato',
     label: 'Contato',
   },
+  {
+    href: '/blog',
+    label: 'Blog',
+  },
 ];
 
 export const Navbar = () => {
