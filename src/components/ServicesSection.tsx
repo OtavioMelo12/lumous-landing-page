@@ -95,9 +95,9 @@ export const ServicesSection = () => {
 
       <div className="mt-8">
         <Carousel
-          className="max-w-[300px] sm:max-w-[500px] md:max-w-[1000px] w-full"
+          className="max-w-[300px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] w-full"
           opts={{
-            align: 'center',
+            align: 'start',
             loop: true,
           }}
           plugins={[

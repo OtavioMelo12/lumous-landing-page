@@ -45,11 +45,11 @@ export const LogoIconOrange = ({ className }: LogoIconProps) => {
 export const LogotipoIconBlack = ({ className }: LogoIconProps) => {
   return (
     <Image
-      alt="Logo Lumous Laranja"
+      alt="Logo Lumous Icone Preto"
       className={cn(className, '')}
-      height={100}
+      height={80}
       src={'/images/icons/LOGOTIPO-HORI-P.svg'}
-      width={200}
+      width={170}
     />
   );
 };

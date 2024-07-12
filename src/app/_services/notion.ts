@@ -15,8 +15,11 @@ export async function getPosts() {
     filter: { or: [{ checkbox: { equals: true }, property: 'published' }] },
   })) as unknown as NotionDatabaseResponse;
 
+  const author = await getUser(response.results[0].created_by.id);
+
   return response.results.map(post => {
     return {
+      author,
       createdAt: post.created_time,
       id: post.id,
       published: post.properties.published.checkbox,
@@ -48,6 +51,8 @@ export async function getPost(slug: string) {
     return null;
   }
 
+  const author = await getUser(response.results[0].created_by.id);
+
   const pageId = response.results[0].id;
 
   const n2m = new NotionToMarkdown({ notionClient: notion });
@@ -56,10 +61,16 @@ export async function getPost(slug: string) {
   const mdString = n2m.toMarkdownString(mdblocks);
 
   return {
+    author,
     content: mdString.parent,
     createdAt: response.results[0].created_time,
     id: pageId,
-    tags: response.results[0].properties.tags.multi_select.map(tag => tag.name),
+    tags: response.results[0].properties.tags.multi_select,
     title: response.results[0].properties.title.title[0].plain_text,
   };
+}
+
+export async function getUser(userId: string) {
+  const response = await notion.users.retrieve({ user_id: userId });
+  return response;
 }

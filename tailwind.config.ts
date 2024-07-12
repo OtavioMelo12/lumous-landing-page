@@ -7,6 +7,9 @@ const config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
+  corePlugins: {
+    preflight: false,
+  },
   darkMode: ['class'],
   plugins: [require('tailwindcss-animate')],
   prefix: '',

@@ -12,6 +12,7 @@ import { Environment } from '@/lib/environment';
 import { cn } from '@/lib/utils';
 
 import './globals.css';
+import './index.css';
 
 const montserrat = Montserrat({
   fallback: ['font-sans', 'sans-serif', 'system-ui', 'ui-sans-serif', 'arial'],

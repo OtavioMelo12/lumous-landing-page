@@ -1,6 +1,9 @@
 import dayjs from 'dayjs';
+import { CalendarIcon } from 'lucide-react';
 import Link from 'next/link';
 
+import { AboutMe } from '@/components/AboutMe';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
@@ -11,27 +14,13 @@ const BlogPage = async () => {
   const posts = await getPosts();
 
   return (
-    <div className=" container p-8 md:p-20 flex flex-col">
-      <h1 className="text-2xl font-bold">
-        Blog - Lumous Automação Residencial
-      </h1>
-
-      <div className="mt-8">
+    <div className="p-4 md:p-12 flex flex-col container mb-20">
+      <h1 className="mb-4 text-xl font-bold">Blog - Lumous</h1>
+      <div className="flex flex-wrap-reverse w-full justify-between gap-8">
         <ul className="flex flex-col gap-6">
           {posts.map(post => (
             <li key={post.id}>
-              <div className="flex flex-col">
-                <p className="font-medium text-muted-foreground">
-                  Publicado em: {dayjs(post.createdAt).format('DD/MM/YYYY')}
-                </p>
-
-                <Link
-                  className="text-xl font-semibold hover:underline"
-                  href={`/blog/${post.slug}`}
-                >
-                  {post.title}
-                </Link>
-
+              <div className="flex flex-col gap-0.5 max-w-[700px]">
                 <div className="flex gap-1 flex-wrap">
                   {post.tags.map(tag => {
                     return (
@@ -44,17 +33,47 @@ const BlogPage = async () => {
                     );
                   })}
                 </div>
+
+                <p className="text-muted-foreground flex items-center gap-1">
+                  <CalendarIcon className="w-4 h-4 inline-block mr-1" />
+                  Publicado em: {dayjs(post.createdAt).format('DD/MM/YYYY')}
+                </p>
+
+                <Link
+                  className="text-xl font-semibold hover:underline"
+                  href={`/blog/${post.slug}`}
+                >
+                  {post.title}
+                </Link>
+
+                <div>
+                  <p className="text-muted-foreground flex items-center gap-1">
+                    <Avatar className="max-h-6 max-w-6">
+                      <AvatarImage
+                        alt="@_otavio_melo"
+                        src={
+                          post.author.avatar_url ||
+                          'https://github.com/OtavioMelo12.png'
+                        }
+                      />
+                      <AvatarFallback>OM</AvatarFallback>
+                    </Avatar>
+                    {post.author.name}
+                  </p>
+                </div>
               </div>
               <Separator className="mt-8" />
             </li>
           ))}
         </ul>
+
+        <AboutMe />
       </div>
     </div>
   );
 };
 
-const bgColorsMap = {
+export const bgColorsMap = {
   blue: 'bg-blue-400 hover:bg-blue-500',
   brown: 'bg-yellow-800 hover:bg-yellow-900',
   default: 'bg-gray-300 hover:bg-gray-400',
