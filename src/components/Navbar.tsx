@@ -42,10 +42,10 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   return (
-    <div className="sticky top-0 z-40 w-full bg-background shadow-lg">
+    <div className="sticky top-0 z-40 w-full bg-white shadow-lg ">
       <NavigationMenu>
-        <NavigationMenuList className="px-8 py-2 w-screen  md:w-[95vw] justify-between">
-          <NavigationMenuItem className="pl-8">
+        <NavigationMenuList className="px-8 py-2 w-screen justify-between">
+          <NavigationMenuItem>
             <Link href="/" rel="noreferrer noopener">
               <LogotipoIconBlack />
             </Link>
