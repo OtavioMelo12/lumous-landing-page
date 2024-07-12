@@ -4,7 +4,7 @@ import { IoLogoWhatsapp } from 'react-icons/io5';
 
 export const ContactHeader = () => {
   return (
-    <div className="bg-teal-500 text-white  p-1">
+    <div className="bg-orange-500 text-white  p-1">
       <div className="container flex items-center justify-between gap-2 ">
         <Link
           className="flex items-center gap-1 text-xs md:text-sm hover:underline whitespace-nowrap"
