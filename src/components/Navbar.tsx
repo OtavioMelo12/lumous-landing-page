@@ -3,11 +3,6 @@ import Link from 'next/link';
 import { FaInstagram } from 'react-icons/fa6';
 
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from '@/components/ui/navigation-menu';
-import {
   Sheet,
   SheetClose,
   SheetContent,
@@ -42,41 +37,38 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   return (
-    <div className="sticky top-0 z-40 w-full bg-white shadow-lg ">
-      <NavigationMenu>
-        <NavigationMenuList className="px-8 py-2 w-screen justify-between">
-          <NavigationMenuItem>
-            <Link href="/" rel="noreferrer noopener">
-              <LogotipoIconBlack />
-            </Link>
-          </NavigationMenuItem>
+    <nav className="sticky top-0 z-40 w-full bg-white shadow-lg ">
+      <div className="flex px-8 py-2 w-full justify-between items-center container ">
+        <Link href="/" rel="noreferrer noopener">
+          <LogotipoIconBlack />
+        </Link>
 
-          <MobileSheet />
+        <MobileSheet />
 
-          {/* desktop */}
-          <div className="hidden md:flex">
-            {routeList.map((route: RouteProps) => (
-              <NavigationMenuItem asChild key={route.href}>
-                <Button asChild className="text-foreground" variant="link">
-                  <Link href={'/' + route.href} rel="noreferrer noopener">
-                    {route.label}
-                  </Link>
-                </Button>
-              </NavigationMenuItem>
-            ))}
-          </div>
-
-          <NavigationMenuItem className="hidden md:flex">
-            <Button asChild size={'sm'}>
-              <Link href={'/blog'} rel="noreferrer noopener">
-                Blog
-                <RssIcon className="size-4 ml-2" />
+        {/* desktop */}
+        <div className="hidden md:flex">
+          {routeList.map((route: RouteProps) => (
+            <Button
+              asChild
+              className="text-foreground"
+              key={route.href}
+              variant="link"
+            >
+              <Link href={'/' + route.href} rel="noreferrer noopener">
+                {route.label}
               </Link>
             </Button>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+          ))}
+        </div>
+
+        <Button asChild className="hidden md:flex" size={'sm'}>
+          <Link href={'/blog'} rel="noreferrer noopener">
+            Blog
+            <RssIcon className="size-4 ml-2" />
+          </Link>
+        </Button>
+      </div>
+    </nav>
   );
 };
 
