@@ -7,6 +7,7 @@ import Script from 'next/script';
 import { ContactHeader } from '@/components/ContactHeader';
 import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
+import GoogleTagManager from '@/components/google-tag-manager/GoogleTagManager';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Environment } from '@/lib/environment';
 import { cn } from '@/lib/utils';
@@ -109,6 +110,7 @@ export default function RootLayout({
           <ContactHeader />
           <Navbar />
           {children}
+          <GoogleTagManager gtmId={Environment.GOOGLE_TAG_MANAGER_ID} />
           <Footer />
         </ThemeProvider>
       </body>
