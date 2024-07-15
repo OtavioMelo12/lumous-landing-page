@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 
 interface GoogleTagManagerProps {
@@ -6,7 +8,7 @@ interface GoogleTagManagerProps {
 }
 
 const GoogleTagManager = ({ gtmId }: GoogleTagManagerProps) => {
-  React.useEffect(() => {
+  useEffect(() => {
     TagManager.initialize({ gtmId });
   }, [gtmId]);
 
