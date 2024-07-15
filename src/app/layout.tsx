@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
@@ -112,7 +112,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
-      <GoogleTagManager gtmId={Environment.GOOGLE_TAG_MANAGER_ID} />
+      <GoogleAnalytics gaId={Environment.GOOGLE_TAG_MANAGER_ID} />
     </html>
   );
 }
